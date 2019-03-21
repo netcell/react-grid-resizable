@@ -1,5 +1,7 @@
 # React Grid Resizable
 
+> [Demo site](https://react-grid-resizable.netlify.com)
+
 ![](https://media.giphy.com/media/1QaZ8J9WGHbLh8NAIB/giphy.gif)
 
 # Install
