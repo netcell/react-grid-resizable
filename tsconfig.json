@@ -15,5 +15,9 @@
     },
     "include": [
         "src"
+    ],
+    "exclude": [
+        "**/*.test.*",
+        "src/Separators/dragTestUtils.ts"
     ]
 }
