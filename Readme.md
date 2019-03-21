@@ -6,7 +6,9 @@
 
 # Install
 
-```
+```sh
+npm install --save react-grid-resizable
+# or
 npm install --save netcell/react-grid-resizable
 ```
 
