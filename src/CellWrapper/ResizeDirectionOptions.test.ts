@@ -34,23 +34,3 @@ test('Disable direction options', () => {
         right: false,
     });
 });
-
-test('Disable direction options pair', () => {
-    expect(processOptions({
-        horizontal: false
-    })).toEqual({
-        top: true,
-        bottom: true,
-        left: false,
-        right: false,
-    });
-
-    expect(processOptions({
-        vertical: false
-    })).toEqual({
-        top: false,
-        bottom: false,
-        left: true,
-        right: true,
-    });
-});
