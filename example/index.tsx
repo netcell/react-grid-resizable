@@ -17,7 +17,7 @@ const StyledCol = styled(Col)`
     
 `
 
-const StyledRowWrapper = (props: PropsWithChildren<any>) => {
+const StyledRowsWrapper = (props: PropsWithChildren<any>) => {
     return <RowsWrapper separatorProps={{
         style: {
             backgroundColor: color[4], 
@@ -25,7 +25,7 @@ const StyledRowWrapper = (props: PropsWithChildren<any>) => {
     }}>{props.children}</RowsWrapper>
 }
 
-const StyledColWrapper = (props: PropsWithChildren<any>) => {
+const StyledColsWrapper = (props: PropsWithChildren<any>) => {
     return <ColsWrapper separatorProps={{
         style: {
             backgroundColor: color[4], 
@@ -37,10 +37,10 @@ const App = () => {
     
     return <div>
         <h1>React Grid Resizable Example</h1>
-        <Wrapper>
-            <StyledRowWrapper>
+        <Wrapper style={{ height: 800 }}>
+            <StyledRowsWrapper>
                 <StyledRow initialHeight={100}>
-                    <StyledColWrapper>
+                    <StyledColsWrapper>
                         <StyledCol initialWidth={100} style={{ backgroundColor: color[0] }}>
                             1.1
                         </StyledCol>
@@ -50,30 +50,30 @@ const App = () => {
                         <StyledCol style={{ backgroundColor: color[2] }}>
                             1.3
                         </StyledCol>
-                    </StyledColWrapper>
+                    </StyledColsWrapper>
                 </StyledRow>
                 <StyledRow initialHeight={150} style={{ backgroundColor: color[2] }}>
                     Dragging the separator below will not change the size of the third row
                 </StyledRow>
                 <StyledRow initialHeight={300} top={false}>
-                    <StyledColWrapper>
+                    <StyledColsWrapper>
                         <StyledCol style={{ backgroundColor: color[1] }}>
                             3.1
                         </StyledCol>
                         <StyledCol>
-                            <StyledRowWrapper>
+                            <StyledRowsWrapper>
                                 <StyledRow initialHeight={100} style={{ backgroundColor: color[0] }}>
                                     3.2.1
                                 </StyledRow>
                                 <StyledRow style={{ backgroundColor: color[2] }}>
                                     3.2.2
                                 </StyledRow>
-                            </StyledRowWrapper>
+                            </StyledRowsWrapper>
                         </StyledCol>
-                    </StyledColWrapper>
+                    </StyledColsWrapper>
                 </StyledRow>
-                <StyledRow initialHeight={120}>
-                    <StyledColWrapper>
+                <StyledRow>
+                    <StyledColsWrapper>
                         <StyledCol style={{ backgroundColor: color[0] }}>
                             4.1
                         </StyledCol>
@@ -83,9 +83,9 @@ const App = () => {
                         <StyledCol style={{  backgroundColor: color[2] }}>
                             4.3
                         </StyledCol>
-                    </StyledColWrapper>
+                    </StyledColsWrapper>
                 </StyledRow>
-            </StyledRowWrapper>
+            </StyledRowsWrapper>
         </Wrapper>
     </div>
 }

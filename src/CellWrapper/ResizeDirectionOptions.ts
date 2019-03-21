@@ -30,16 +30,6 @@ export interface ResizeDirectionOptions {
      */
     right?     : boolean;
     /**
-     * Default `true`
-     * Set to `false` to disable resizing by separator on the right and left
-     */
-    horizontal?: boolean;
-    /**
-     * Default `true`
-     * Set to `false` to disable resizing by separator above and below
-     */
-    vertical?  : boolean;
-    /**
      * Default `false`
      * Set to `true` to disable resizing
      */
@@ -54,23 +44,11 @@ export const processOptions = (
         bottom     = true,
         left       = true,
         right      = true,
-        horizontal = true,
-        vertical   = true,
         disabled   = false,
     } = options;
 
     if (disabled) {
         top = bottom = left = right = false;
-    }
-
-    if (!horizontal) {
-        left  = false;
-        right = false;
-    }
-
-    if (!vertical) {
-        top    = false;
-        bottom = false;
     }
     
     return {
