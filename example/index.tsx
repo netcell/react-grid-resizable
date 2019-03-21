@@ -35,56 +35,59 @@ const StyledColWrapper = (props: PropsWithChildren<any>) => {
 
 const App = () => {
     
-    return <Wrapper>
-        <StyledRowWrapper>
-            <StyledRow initialHeight={100}>
-                <StyledColWrapper>
-                    <StyledCol style={{ backgroundColor: color[0] }} initialWidth={100}>
-                        1.1
-                    </StyledCol>
-                    <StyledCol left={false} style={{  backgroundColor: color[1] }} initialWidth={100}>
-                        1.2
-                    </StyledCol>
-                    <StyledCol style={{  backgroundColor: color[2] }}>
-                        1.3
-                    </StyledCol>
-                </StyledColWrapper>
-            </StyledRow>
-            <StyledRow initialHeight={150} style={{ backgroundColor: color[2] }}>
-                Dragging the separator below will not change the size of the third row
-            </StyledRow>
-            <StyledRow initialHeight={300} top={false}>
-                <StyledColWrapper>
-                    <StyledCol style={{ backgroundColor: color[1] }}>
-                        3.1
-                    </StyledCol>
-                    <StyledCol>
-                        <StyledRowWrapper>
-                            <StyledRow initialHeight={100} style={{ backgroundColor: color[0] }}>
-                                3.2.1
-                            </StyledRow>
-                            <StyledRow style={{ backgroundColor: color[2] }}>
-                                3.2.2
-                            </StyledRow>
-                        </StyledRowWrapper>
-                    </StyledCol>
-                </StyledColWrapper>
-            </StyledRow>
-            <StyledRow initialHeight={120}>
-                <StyledColWrapper>
-                    <StyledCol style={{ backgroundColor: color[0] }}>
-                        4.1
-                    </StyledCol>
-                    <StyledCol style={{  backgroundColor: color[1] }} initialWidth={100}>
-                        4.2
-                    </StyledCol>
-                    <StyledCol style={{  backgroundColor: color[2] }}>
-                        4.3
-                    </StyledCol>
-                </StyledColWrapper>
-            </StyledRow>
-        </StyledRowWrapper>
-    </Wrapper>
+    return <div>
+        <h1>React Grid Resizable Example</h1>
+        <Wrapper>
+            <StyledRowWrapper>
+                <StyledRow initialHeight={100}>
+                    <StyledColWrapper>
+                        <StyledCol initialWidth={100} style={{ backgroundColor: color[0] }}>
+                            1.1
+                        </StyledCol>
+                        <StyledCol initialWidth={100} left={false} style={{ backgroundColor: color[1] }}>
+                            1.2
+                        </StyledCol>
+                        <StyledCol style={{ backgroundColor: color[2] }}>
+                            1.3
+                        </StyledCol>
+                    </StyledColWrapper>
+                </StyledRow>
+                <StyledRow initialHeight={150} style={{ backgroundColor: color[2] }}>
+                    Dragging the separator below will not change the size of the third row
+                </StyledRow>
+                <StyledRow initialHeight={300} top={false}>
+                    <StyledColWrapper>
+                        <StyledCol style={{ backgroundColor: color[1] }}>
+                            3.1
+                        </StyledCol>
+                        <StyledCol>
+                            <StyledRowWrapper>
+                                <StyledRow initialHeight={100} style={{ backgroundColor: color[0] }}>
+                                    3.2.1
+                                </StyledRow>
+                                <StyledRow style={{ backgroundColor: color[2] }}>
+                                    3.2.2
+                                </StyledRow>
+                            </StyledRowWrapper>
+                        </StyledCol>
+                    </StyledColWrapper>
+                </StyledRow>
+                <StyledRow initialHeight={120}>
+                    <StyledColWrapper>
+                        <StyledCol style={{ backgroundColor: color[0] }}>
+                            4.1
+                        </StyledCol>
+                        <StyledCol initialWidth={100} style={{  backgroundColor: color[1] }}>
+                            4.2
+                        </StyledCol>
+                        <StyledCol style={{  backgroundColor: color[2] }}>
+                            4.3
+                        </StyledCol>
+                    </StyledColWrapper>
+                </StyledRow>
+            </StyledRowWrapper>
+        </Wrapper>
+    </div>
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
