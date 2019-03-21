@@ -7,7 +7,8 @@
     "test": "jest src --watch",
     "build": "tsc",
     "start": "parcel example/index.html",
-    "build-example": "parcel build example/index.html"
+    "build-example": "parcel build example/index.html",
+    "prepare" : "npm run build"
   },
   "repository": {
     "type": "git",
