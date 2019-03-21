@@ -10,6 +10,15 @@
 npm install --save netcell/react-grid-resizable
 ```
 
+# Development
+
+```
+npm install
+npm start
+```
+
+Navigate to the url displayed in the terminal. (Normally `http://localhost:1234`)
+
 # Usage
 
 ```js
