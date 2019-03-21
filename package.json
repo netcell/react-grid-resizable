@@ -1,0 +1,33 @@
+{
+  "name": "react-resizable",
+  "version": "1.0.0",
+  "description": "React Resizable Component",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest src --watch",
+    "build": "tsc",
+    "start": "parcel example/index.html",
+    "npm": "docker-compose run package ./npm-install.sh"
+  },
+  "author": "netcell",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/lodash": "^4.14.123",
+    "@types/react": "^16.8.8",
+    "@types/react-dom": "^16.8.2",
+    "@types/styled-components": "^4.0.3",
+    "jest": "^24.5.0",
+    "nice-color-palettes": "^2.0.0",
+    "parcel-bundler": "^1.12.2",
+    "react-dom": "^16.8.4",
+    "react-testing-library": "^6.0.1",
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.8.4",
+    "styled-components": "^4.1.3"
+  }
+}
