@@ -1,13 +1,16 @@
 {
-  "name": "react-resizable",
+  "name": "react-grid-resizable",
   "version": "1.0.0",
-  "description": "React Resizable Component",
+  "description": "React Grid Resizable Component",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest src --watch",
     "build": "tsc",
-    "start": "parcel example/index.html",
-    "npm": "docker-compose run package ./npm-install.sh"
+    "start": "parcel example/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netcell/react-grid-resizable.git"
   },
   "author": "netcell",
   "license": "ISC",
